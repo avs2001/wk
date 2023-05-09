@@ -2,6 +2,17 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "paths": {
+      "@kbm/core": [
+        "projects/kbm/core/src/public-api"
+      ],
+      "@kbm/core/*": [
+        "projects/kbm/core/src/*"
+      ],
+      "@kbm/kit": [
+        "projects/kbm/kit/src/public-api"
+      ]
+    },
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
