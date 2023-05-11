@@ -1,0 +1,14 @@
+<div class="kbm-input-group">
+  <ng-content select="[kbmLabel]"></ng-content>
+  <div class="input-group">
+    <div class="prefix" *ngIf="hasPrefix">
+      <ng-content select="[kbmPrefix]"></ng-content>
+    </div>
+    <div class="input" [ngClass]="{native:_input?.nativeControl}">
+      <ng-content select="[kbmInput]"></ng-content>
+    </div>
+    <div class="suffix" *ngIf="hasSuffix">
+      <ng-content select="[kbmSuffix]"></ng-content>
+    </div>
+  </div>
+</div>

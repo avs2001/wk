@@ -1,2 +1,90 @@
 /* You can add global styles to this file, and also import other style files */
-@import "projects/kbm/core/src/styles/index.scss";
+@use "projects/kbm/core/src/styles/index.scss";
+
+:root {
+  --color-primary: #428F99;
+  --color-secondary: #3FA9F5;
+  --color-warning: #C0272D;
+  --main-gap: 64px;
+
+  //Input
+  --input-height: 30px;
+  --input-radius: 5px;
+  --input-border-color: #666666;
+  --input-border-size: 1px;
+  --input-error-color: #FF0000;
+  --input-focus-border-color: #3FA9F5;
+  --input-disabled-border-color: #CCC;
+  --input-font-size: 12px;
+  --input-font-family: Inter, sans-serif;
+
+  //Label
+  --label-font-size: 13px;
+  --label-margin: 0 0 3.5px 0;
+  --label-color: #000000;
+  --label-font-weight: 400;
+
+  //Button
+  --button-background: var(--color-primary);
+  --button-border-color: transparent;
+  --button-radius: 4px;
+  --button-height: 40px;
+  --button-text-color: #FFFFFF;
+  --button-font-size: 1rem;
+  --button-font-weight: 400;
+  //Button focus
+  --button-focus-background: var(--color-secondary);
+  --button-focus-border-color: transparent;
+
+  //Card
+  --card-background: #F2F2F2;
+  --card-border-radius: 10px;
+  --card-content-padding: 10px;
+
+  //Layout
+  //Sidebar
+  --sidebar-width: 126px;
+  --sidebar-background: var(--color-primary);
+}
+
+button.kbm-button-outline {
+  --button-background: transparent;
+  --button-border-color: var(--color-primary);
+  --button-text-color: var(--color-primary);
+  --button-focus-background: transparent;
+  --button-focus-border-color: var(--color-secondary);
+}
+
+button.kbm-button-link,
+a.kbm-button-link {
+  --button-background: transparent;
+  --button-border-color: transparent;
+  --button-text-color: var(--color-primary);
+  --button-focus-background: transparent;
+  --button-focus-border-color: var(--color-secondary);
+}
+
+button.kbm-button-warning {
+  --button-background: var(--color-warning);
+  --button-border-color: transparent;
+  --button-text-color: #FFFFFF;
+  --button-focus-background: var(--color-warning);
+  --button-focus-border-color: transparent;
+}
+
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.kbm-input-group {
+  &.test {
+    --input-height: 25px;
+    --input-radius: 900px;
+    --input-border-color: #666666;
+  }
+}

@@ -1,0 +1,133 @@
+
+%c {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 10px;
+  border-color: var(--input-border-color, #ccc);
+  border-style: solid;
+  border-width: var(--input-border-size, 1px);
+  line-height: 0;
+}
+
+
+.kbm-input-group {
+  display: inline-flex;
+  flex-direction: column;
+  width: 100%;
+  box-sizing: border-box;
+
+
+  .kbm-label {
+    font-size: var(--label-font-size, 1rem);
+    font-weight: var(--label-font-weight, 400);
+    margin: var(--label-margin, 0);
+    color: var(--label-color, #000);
+  }
+
+  .suffix {
+    @extend %c;
+    height: var(--input-height);
+    border-radius: 0 var(--input-radius) var(--input-radius) 0;
+    border-left: none;
+  }
+
+  &.has-prefix {
+    .input {
+      border-radius: 0 var(--input-radius) var(--input-radius) 0;
+      border-left: none;
+    }
+  }
+
+  &.has-suffix {
+    .input {
+      border-radius: var(--input-radius) 0 0 var(--input-radius);
+      border-right: none;
+    }
+  }
+
+  &.has-prefix.has-suffix {
+    .input {
+      border-radius: 0;
+      border-left: none;
+      border-right: none;
+    }
+  }
+
+  &.focused {
+    .input-group {
+      --input-border-color: var(--input-focus-border-color, #3FA9F5);
+    }
+  }
+
+  &.disabled {
+    .input-group {
+      --input-border-color: var(--input-disabled-border-color, #ccc);
+    }
+  }
+
+  &.ng-invalid.ng-touched {
+    .input-group {
+      --input-border-color: var(--input-error-color);
+    }
+  }
+
+
+  .input-group {
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+
+
+    .prefix {
+      @extend %c;
+      height: var(--input-height);
+      border-radius: var(--input-radius) 0 0 var(--input-radius);
+      border-right: none;
+    }
+
+    .input {
+      @extend %c;
+      position: relative;
+      flex: 1 1 auto;
+      height: var(--input-height);
+      border-radius: var(--input-radius);
+
+
+      input,
+      select {
+        padding: 0;
+        line-height: var(--input-height);
+        border: none;
+        outline: none;
+        appearance: none;
+        background: none;
+        font-weight: var(--font-weight, 400);
+        font-size: var(--input-font-size, 12px);
+        font-family: var(--input-font-family, inherit);
+        width: 100%;
+      }
+
+
+      &.native {
+        &:after {
+          content: "";
+          width: 0;
+          height: 0;
+          border-left: 5px solid rgba(0, 0, 0, 0);
+          border-right: 5px solid rgba(0, 0, 0, 0);
+          border-top: 5px solid var(--input-border-color, #ccc);
+          position: absolute;
+          right: 0;
+          top: 50%;
+          margin-top: -2.5px;
+          pointer-events: none;
+          transform: translateX(-100%);
+        }
+      }
+    }
+  }
+}
+
+
+

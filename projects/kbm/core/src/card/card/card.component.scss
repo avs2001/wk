@@ -1,0 +1,27 @@
+.kbm-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  background: var(--card-background, #F2F2F2);
+  border-radius: var(--card-border-radius, 4px);
+}
+
+.kbm-card-content {
+  flex: 1;
+  padding: 0 var(--card-content-padding, 20px) 0 var(--card-content-padding, 20px);
+}
+
+.kbm-card-header {
+  padding: var(--card-content-padding, 20px);
+}
+
+.kbm-card-title {
+  padding: 0;
+  margin: 0;
+  flex: 1;
+}
+
+.kbm-card-footer {
+  padding: 0 var(--card-content-padding, 20px) 0 var(--card-content-padding, 20px);
+}

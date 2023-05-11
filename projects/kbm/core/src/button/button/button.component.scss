@@ -1,0 +1,45 @@
+@use "sass:color";
+
+.kbm-button {
+  box-sizing: border-box;
+  display: inline-flex;
+  padding: 0;
+  font-size: inherit;
+  border-radius: var(--button-radius, 900px);
+  border: none;
+  line-height: 0;
+  font-family: unset;
+  margin: 8px 8px 0;
+  cursor: pointer;
+  background: none;
+
+  .label {
+    box-sizing: border-box;
+    display: inline-flex;
+    height: var(--button-height, 30px);
+    width: auto;
+    padding: 0 16px;
+    justify-content: center;
+    align-items: center;
+    border-radius: inherit;
+    border-width: var(--button-border-width, 1px);
+    border-style: solid;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border-color: var(--button-border-color, #000);
+    background: var(--button-background, rgba(0, 0, 0, 0));
+    color: var(--button-text-color, #000);
+    transition: background-color 0.25s ease-in-out, border-color 0.25s ease-in-out;
+    font-family: var(--button-font-family, "Roboto", sans-serif);
+    font-size: var(--button-font-size, 1rem);
+    font-weight: var(--button-font-weight, 400);
+  }
+
+  &:focus,
+  &:active {
+    --button-background: var(--button-focus-background, var(--color-secondary, #ccc));
+    --button-border-color: var(--button-focus-border-color, var(--color-secondary, #ccc));
+  }
+}
+
+
