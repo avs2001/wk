@@ -9,7 +9,8 @@ import {SidebarMenuComponent} from "@kbm/core/layout/yoda";
   templateUrl: './sidebar-menu-item.component.html',
   styleUrls: ['./sidebar-menu-item.component.scss'],
   host: {
-    '[class.kbm-sidebar-menu-item]': 'true'
+    '[class.kbm-sidebar-menu-item]': 'true',
+    '[class.collapsed]': 'isCollapsed',
   },
   changeDetection: ChangeDetectionStrategy.OnPush,
   encapsulation: ViewEncapsulation.None
@@ -21,7 +22,6 @@ export class SidebarMenuItemComponent {
     sidebarMenu.registerItem(this);
   }
 
-  @HostBinding('class.collapsed')
   get isCollapsed() {
     return !this.sidebarMenu.expanded;
   }

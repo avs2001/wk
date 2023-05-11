@@ -1,4 +1,4 @@
-import {ChangeDetectionStrategy, Component, ViewEncapsulation} from '@angular/core';
+import {ChangeDetectionStrategy, Component, signal, ViewEncapsulation} from '@angular/core';
 import {NgOptimizedImage} from "@angular/common";
 
 @Component({
@@ -9,7 +9,7 @@ import {NgOptimizedImage} from "@angular/common";
   styleUrls: ['./sidebar.component.scss'],
   host: {
     '[class.kbm-sidebar]': 'true',
-    '[class.small]': '!expanded'
+    '[class.small]': '!expanded()'
   },
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [
@@ -18,9 +18,9 @@ import {NgOptimizedImage} from "@angular/common";
   encapsulation: ViewEncapsulation.None
 })
 export class SidebarComponent {
-  expanded = true;
+  readonly expanded = signal(true);
 
   toggle() {
-    this.expanded = !this.expanded;
+    this.expanded.update(v => !v);
   }
 }

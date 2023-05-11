@@ -1,4 +1,4 @@
-import {ChangeDetectionStrategy, Component, Host, HostBinding, SkipSelf, ViewEncapsulation} from '@angular/core';
+import {ChangeDetectionStrategy, Component, Host, SkipSelf, ViewEncapsulation} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {SidebarComponent, SidebarMenuItemComponent} from "@kbm/core/layout/yoda";
 
@@ -9,7 +9,8 @@ import {SidebarComponent, SidebarMenuItemComponent} from "@kbm/core/layout/yoda"
   templateUrl: './sidebar-menu.component.html',
   styleUrls: ['./sidebar-menu.component.scss'],
   host: {
-    class: 'kbm-sidebar-menu'
+    '[class.kbm-sidebar-menu]': 'true',
+    '[class.expanded]': 'expanded'
   },
   changeDetection: ChangeDetectionStrategy.OnPush,
   encapsulation: ViewEncapsulation.None
@@ -30,8 +31,7 @@ export class SidebarMenuComponent {
     return this._items;
   }
 
-  @HostBinding('class.expanded')
   get expanded() {
-    return this._sidebar.expanded;
+    return this._sidebar.expanded();
   }
 }
