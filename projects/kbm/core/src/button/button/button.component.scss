@@ -63,6 +63,7 @@
     width: var(--button-height, 30px);
     overflow: hidden;
     color: var(--button-text-color, #000);
+    font-weight: var(--icon-font-weight, 400);
   }
 }
 
