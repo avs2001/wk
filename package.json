@@ -6,12 +6,14 @@
     "start": "ng serve",
     "build": "ng build",
     "build:core": "ng build @kbm/core --configuration production",
+    "build:kit": "ng build @kbm/kit --configuration production",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
   "private": true,
   "dependencies": {
     "@angular/animations": "^16.0.1",
+    "@angular/cdk": "^16.0.0",
     "@angular/common": "^16.0.1",
     "@angular/compiler": "^16.0.1",
     "@angular/core": "^16.0.1",

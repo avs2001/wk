@@ -8,35 +8,39 @@
 
 
     <h4>Inputs</h4>
-    <kbm-input-group class="test">
-      <label kbmLabel>Input disabled</label>
-      <input type="text" kbmInput>
-    </kbm-input-group>
+    <form>
+      <kbm-input-group class="test">
+        <label kbmLabel>Input disabled</label>
+        <input type="text" kbmInput>
+      </kbm-input-group>
 
-    <kbm-input-group>
-      <label kbmLabel>Label</label>
-      <input type="text" kbmInput [formControl]="control">
-      <div kbmSuffix>
-        <span>Filters</span>
-      </div>
-      <div kbmPrefix>+1</div>
-    </kbm-input-group>
+      <kbm-input-group>
+        <label kbmLabel>Label</label>
+        <input type="text" kbmInput [formControl]="control">
+        <div kbmSuffix>
+          <span>Filters</span>
+        </div>
+        <div kbmPrefix>+1</div>
+      </kbm-input-group>
 
 
-    <kbm-input-group>
-      <label kbmLabel>Label for select</label>
-      <select kbmInput>
-        <option>1</option>
-        <option>2</option>
-      </select>
-    </kbm-input-group>
+      <kbm-input-group>
+        <label kbmLabel>Label for select</label>
+        <select kbmInput>
+          <option>1</option>
+          <option>2</option>
+        </select>
+      </kbm-input-group>
+    </form>
 
 
     <h4>Buttons</h4>
-    <button kbm-button>Simple button</button>
-    <button class="kbm-button-outline" kbm-button>Outline button</button>
-    <button class="kbm-button-warning" kbm-button>Warning button</button>
-    <a class="kbm-button-link" kbm-button>Link button</a>
+   <div>
+     <button kbm-button>Simple button</button>
+     <button class="kbm-button-outline" kbm-button>Outline button</button>
+     <button class="kbm-button-warning" kbm-button>Warning button</button>
+     <a class="kbm-button-link" kbm-button>Link button</a>
+   </div>
 
     <h4>Card</h4>
 
