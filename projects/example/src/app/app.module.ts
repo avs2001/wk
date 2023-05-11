@@ -3,7 +3,14 @@ import {BrowserModule} from '@angular/platform-browser';
 
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
-import {InputDirective, InputGroupComponent, LabelDirective, PrefixDirective, SuffixDirective} from "@kbm/core";
+import {
+  IconComponent,
+  InputDirective,
+  InputGroupComponent,
+  LabelDirective,
+  PrefixDirective,
+  SuffixDirective
+} from "@kbm/core";
 import {ReactiveFormsModule} from "@angular/forms";
 import {ButtonComponent} from "@kbm/core/button";
 import {CardComponent, CardContentDirective, CardTitleDirective} from "@kbm/core/card";
@@ -31,7 +38,8 @@ import {DrawerComponent, LogoComponent, MainContainerComponent, SidebarComponent
     DrawerComponent,
     SidebarComponent,
     MainContainerComponent,
-    LogoComponent
+    LogoComponent,
+    IconComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
