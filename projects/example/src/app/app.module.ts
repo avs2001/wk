@@ -15,7 +15,13 @@ import {ReactiveFormsModule} from "@angular/forms";
 import {ButtonComponent} from "@kbm/core/button";
 import {CardComponent, CardContentDirective, CardTitleDirective} from "@kbm/core/card";
 import {CardHeaderComponent} from "@kbm/core/card/card-header/card-header.component";
-import {DrawerComponent, LogoComponent, MainContainerComponent, SidebarComponent} from "@kbm/core/layout/yoda";
+import {
+  DrawerComponent,
+  LogoComponent,
+  MainContainerComponent,
+  SidebarComponent,
+  ToolbarComponent
+} from "@kbm/core/layout/yoda";
 
 @NgModule({
   declarations: [
@@ -39,7 +45,8 @@ import {DrawerComponent, LogoComponent, MainContainerComponent, SidebarComponent
     SidebarComponent,
     MainContainerComponent,
     LogoComponent,
-    IconComponent
+    IconComponent,
+    ToolbarComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

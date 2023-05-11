@@ -3,7 +3,6 @@
   width: 100%;
   height: 100%;
   grid-template-columns:126px 1fr;
-  gap: var(--main-gap, 20px);
 
   &.small {
     grid-template-columns:50px 1fr;

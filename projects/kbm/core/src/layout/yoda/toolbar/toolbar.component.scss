@@ -1,0 +1,20 @@
+.kbm-toolbar {
+  display: flex;
+
+  & > * {
+    flex: 1;
+    &:nth-child(2) {
+      margin-right: 10px;
+      border: 1px solid #000;
+      justify-content: center;
+      align-items: flex-end;
+    }
+  }
+
+  .link {
+    --button-background: transparent;
+    --button-border-color: transparent;
+    --button-text-color: #000;
+    --button-font-size: 14px;
+  }
+}
