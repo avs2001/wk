@@ -2,66 +2,84 @@
   <kbm-sidebar #sidebar="kbmSidebar">
     <kbm-logo></kbm-logo>
     <button (click)="sidebar.toggle()">Toggle</button>
+    <kbm-sidebar-menu>
+      <a kbm-sidebar-menu-item routerLink="dashboard" routerLinkActive="active">
+        <kbm-icon>home</kbm-icon>
+        <ng-container ngProjectAs="label">Home</ng-container>
+      </a>
+      <a kbm-sidebar-menu-item routerLink="user" routerLinkActive="active">
+        <kbm-icon>person</kbm-icon>
+        <ng-container ngProjectAs="label">Users</ng-container>
+      </a>
+      <a kbm-sidebar-menu-item routerLink="tenant" routerLinkActive="active">
+        <kbm-icon>folder_open</kbm-icon>
+        <ng-container ngProjectAs="label">Tenants</ng-container>
+      </a>
+      <a kbm-sidebar-menu-item>
+        <kbm-icon>power</kbm-icon>
+        <ng-container ngProjectAs="label">Devices</ng-container>
+      </a>
+    </kbm-sidebar-menu>
   </kbm-sidebar>
 
   <kbm-main-container>
     <kbm-toolbar></kbm-toolbar>
     <router-outlet></router-outlet>
 
-   <!-- <h4>Inputs</h4>
-    <form>
-      <kbm-input-group class="test">
-        <label kbmLabel>Input disabled</label>
-        <input type="text" kbmInput>
-      </kbm-input-group>
+    <!-- <h4>Inputs</h4>
+     <form>
+       <kbm-input-group class="test">
+         <label kbmLabel>Input disabled</label>
+         <input type="text" kbmInput>
+       </kbm-input-group>
 
-      <kbm-input-group>
-        <label kbmLabel>Label</label>
-        <input type="text" kbmInput [formControl]="control">
-        <div kbmSuffix>
-          <span>Filters</span>
-        </div>
-        <div kbmPrefix>+1</div>
-      </kbm-input-group>
-
-
-      <kbm-input-group>
-        <label kbmLabel>Label for select</label>
-        <select kbmInput>
-          <option>1</option>
-          <option>2</option>
-        </select>
-      </kbm-input-group>
-    </form>
+       <kbm-input-group>
+         <label kbmLabel>Label</label>
+         <input type="text" kbmInput [formControl]="control">
+         <div kbmSuffix>
+           <span>Filters</span>
+         </div>
+         <div kbmPrefix>+1</div>
+       </kbm-input-group>
 
 
-    <h4>Buttons</h4>
-    <div>
-      <button kbm-button>Simple button</button>
-      <button class="kbm-button-outline" kbm-button>Outline button</button>
-      <button class="kbm-button-warning" kbm-button>Warning button</button>
-      <a class="kbm-button-link" kbm-button>Link button</a>
-      <button class="kbm-button-warning" kbm-button>
-        <kbm-icon end>settings</kbm-icon>
-        Position End
-      </button>
-      <button class="kbm-button-warning" kbm-button>
-        <kbm-icon>settings</kbm-icon>
-        Position Start
-      </button>
-    </div>
+       <kbm-input-group>
+         <label kbmLabel>Label for select</label>
+         <select kbmInput>
+           <option>1</option>
+           <option>2</option>
+         </select>
+       </kbm-input-group>
+     </form>
 
-    <h4>Card</h4>
 
-    <kbm-card>
-      <kbm-card-header>
-        <h3 kbmCardTitle>Card header</h3>
-      </kbm-card-header>
-      <div kbmCardContent>
-        <p>lipsum</p>
-      </div>
-    </kbm-card>
--->
+     <h4>Buttons</h4>
+     <div>
+       <button kbm-button>Simple button</button>
+       <button class="kbm-button-outline" kbm-button>Outline button</button>
+       <button class="kbm-button-warning" kbm-button>Warning button</button>
+       <a class="kbm-button-link" kbm-button>Link button</a>
+       <button class="kbm-button-warning" kbm-button>
+         <kbm-icon end>settings</kbm-icon>
+         Position End
+       </button>
+       <button class="kbm-button-warning" kbm-button>
+         <kbm-icon>settings</kbm-icon>
+         Position Start
+       </button>
+     </div>
+
+     <h4>Card</h4>
+
+     <kbm-card>
+       <kbm-card-header>
+         <h3 kbmCardTitle>Card header</h3>
+       </kbm-card-header>
+       <div kbmCardContent>
+         <p>lipsum</p>
+       </div>
+     </kbm-card>
+ -->
   </kbm-main-container>
 </kbm-drawer>
 

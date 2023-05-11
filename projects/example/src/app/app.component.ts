@@ -5,10 +5,11 @@ import {
   DrawerComponent,
   LogoComponent,
   MainContainerComponent,
-  SidebarComponent,
-  ToolbarComponent
+  SidebarComponent, SidebarMenuComponent, SidebarMenuItemComponent,
+  ToolbarComponent,
 } from "@kbm/core/layout/yoda";
-import {RouterOutlet} from "@angular/router";
+import {RouterLink, RouterLinkActive, RouterOutlet} from "@angular/router";
+import {IconComponent} from "@kbm/core";
 
 @Component({
   selector: 'ex-root',
@@ -20,7 +21,12 @@ import {RouterOutlet} from "@angular/router";
     ToolbarComponent,
     RouterOutlet,
     SidebarComponent,
-    MainContainerComponent
+    SidebarMenuComponent,
+    MainContainerComponent,
+    SidebarMenuItemComponent,
+    IconComponent,
+    RouterLink,
+    RouterLinkActive
   ],
   styleUrls: ['./app.component.scss']
 })
