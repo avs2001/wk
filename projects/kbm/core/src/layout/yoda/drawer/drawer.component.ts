@@ -1,5 +1,14 @@
-import {ChangeDetectionStrategy, Component, ContentChild, HostBinding, ViewEncapsulation} from '@angular/core';
-import {SidebarComponent} from "@kbm/core/layout/yoda";
+import {
+  ChangeDetectionStrategy,
+  Component,
+  ContentChild,
+  forwardRef,
+  HostBinding,
+  ViewEncapsulation
+} from '@angular/core';
+import {SidebarComponent, ToolbarComponent} from "@kbm/core/layout/yoda";
+import {OpenSlot} from "@kbm/core/layout/open-slot";
+import {CdkPortalOutlet} from "@angular/cdk/portal";
 
 @Component({
   selector: 'kbm-drawer',
@@ -11,13 +20,22 @@ import {SidebarComponent} from "@kbm/core/layout/yoda";
     '[class.kbm-drawer]': 'true',
   },
   changeDetection: ChangeDetectionStrategy.OnPush,
-  encapsulation: ViewEncapsulation.None
-
+  encapsulation: ViewEncapsulation.None,
+  providers: [
+    {provide: OpenSlot, useExisting: DrawerComponent}
+  ]
 })
-export class DrawerComponent {
+export class DrawerComponent implements OpenSlot {
   @ContentChild(SidebarComponent) _sidebar: SidebarComponent | undefined;
+  @ContentChild(ToolbarComponent) _toolbar: ToolbarComponent | undefined;
 
   @HostBinding('class.small') get small() {
     return !this._sidebar?.expanded;
   }
+
+  get navOpenSlot(): CdkPortalOutlet | undefined {
+    return this._toolbar?._outlet;
+  }
+
+
 }
