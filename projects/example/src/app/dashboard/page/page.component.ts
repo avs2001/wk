@@ -1,13 +1,16 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {OpenSlotComponent} from "@kbm/core/layout/open-slot/open-slot.component";
+import {NavbarProjectorComponent} from "@kbm/core/layout/navbar-projector/navbar-projector.component";
 
 @Component({
   selector: 'ex-page',
   standalone: true,
-  imports: [CommonModule, OpenSlotComponent],
+  imports: [CommonModule, NavbarProjectorComponent],
   templateUrl: './page.component.html',
-  styleUrls: ['./page.component.scss']
+  styleUrls: ['./page.component.scss'],
+  host: {
+    'id': 'dashboard-page'
+  }
 })
 export class PageComponent {
 

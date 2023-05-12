@@ -33,7 +33,7 @@ export class DrawerComponent implements OpenSlot {
     return !this._sidebar?.expanded;
   }
 
-  get navOpenSlot(): CdkPortalOutlet | undefined {
+  get openSlot(): CdkPortalOutlet | undefined {
     return this._toolbar?._outlet;
   }
 

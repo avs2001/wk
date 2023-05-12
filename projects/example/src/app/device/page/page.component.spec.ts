@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { OpenSlotComponent } from './open-slot.component';
+import { PageComponent } from './page.component';
 
-describe('OpenSlotComponent', () => {
-  let component: OpenSlotComponent;
-  let fixture: ComponentFixture<OpenSlotComponent>;
+describe('PageComponent', () => {
+  let component: PageComponent;
+  let fixture: ComponentFixture<PageComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [OpenSlotComponent]
+      imports: [PageComponent]
     });
-    fixture = TestBed.createComponent(OpenSlotComponent);
+    fixture = TestBed.createComponent(PageComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

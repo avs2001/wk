@@ -1,5 +1,5 @@
 import {ChangeDetectionStrategy, Component} from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {CommonModule} from '@angular/common';
 import {NavbarProjectorComponent} from "@kbm/core/layout/navbar-projector/navbar-projector.component";
 
 @Component({
@@ -8,10 +8,10 @@ import {NavbarProjectorComponent} from "@kbm/core/layout/navbar-projector/navbar
   imports: [CommonModule, NavbarProjectorComponent],
   templateUrl: './page.component.html',
   styleUrls: ['./page.component.scss'],
-  host:{
-    id:'user-page'
+  host: {
+    'id': 'device-page'
   },
-  changeDetection:ChangeDetectionStrategy.OnPush,
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class PageComponent {
 
