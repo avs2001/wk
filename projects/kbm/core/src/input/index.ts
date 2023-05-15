@@ -4,3 +4,4 @@ export * from './suffix.directive';
 export * from './label.directive';
 export * from './input-group/input-group.component';
 export * from './checkbox/checkbox.component';
+export * from './radio/radio.component';

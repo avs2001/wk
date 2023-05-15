@@ -30,7 +30,7 @@ export class DrawerComponent implements OpenSlot {
   @ContentChild(ToolbarComponent) _toolbar: ToolbarComponent | undefined;
 
   @HostBinding('class.small') get small() {
-    return !this._sidebar?.expanded;
+    return !this._sidebar?.expanded();
   }
 
   get openSlot(): CdkPortalOutlet | undefined {

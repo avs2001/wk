@@ -1,30 +1,29 @@
 import {ChangeDetectionStrategy, Component, forwardRef, Input, ViewEncapsulation} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {ControlValueAccessor, NG_VALUE_ACCESSOR} from "@angular/forms";
+import {NG_VALUE_ACCESSOR} from "@angular/forms";
 import {coerceBooleanProperty} from "@angular/cdk/coercion";
 
 @Component({
-  selector: 'kbm-checkbox',
+  selector: 'kbm-radio',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './checkbox.component.html',
-  styleUrls: ['./checkbox.component.scss'],
+  templateUrl: './radio.component.html',
+  styleUrls: ['./radio.component.scss'],
   host: {
-    '[class.kbm-checkbox]': 'true',
-    '[class.kbm-checkbox--checked]': 'checked',
-    '[class.kbm-checkbox--disabled]': 'disabled',
+    '[class.kbm-radio]': 'true',
+    '[class.kbm-radio--disabled]': 'disabled',
   },
   providers: [
     {
       provide: NG_VALUE_ACCESSOR,
-      useExisting: forwardRef(() => CheckboxComponent),
+      useExisting: forwardRef(() => RadioComponent),
       multi: true
     }
   ],
   changeDetection: ChangeDetectionStrategy.OnPush,
   encapsulation: ViewEncapsulation.None
 })
-export class CheckboxComponent implements ControlValueAccessor {
+export class RadioComponent {
   @Input() checked: boolean = false;
   _disabled: boolean = false;
   @Input()

@@ -1,7 +1,7 @@
-<label class="kbm-checkbox">
-  <input type="checkbox" [checked]="checked" (click)="toggle()"/>
-  <svg focusable="false" viewBox="0 0 24 24" aria-hidden="true" class="checkmark">
-    <path fill="none" d="M1.73,12.91 8.1,19.28 22.79,4.59" class="checkmark-path"></path>
+<label>
+  <input type="checkbox" [disabled]="disabled" [checked]="checked" (click)="toggle()"/>
+  <svg focusable="false" viewBox="0 0 24 24" aria-hidden="true" class="kbm-checkbox__checkmark">
+    <path fill="none" d="M1.73,12.91 8.1,19.28 22.79,4.59" class="kbm-checkbox__checkmark-path"></path>
   </svg>
   <ng-content></ng-content>
 </label>
