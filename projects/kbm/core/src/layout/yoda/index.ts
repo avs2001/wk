@@ -5,3 +5,4 @@ export * from './sidebar-menu-item/sidebar-menu-item.component';
 export * from './logo/logo.component';
 export * from './main-container/main-container.component';
 export * from './toolbar/toolbar.component';
+export * from './page-layouts';

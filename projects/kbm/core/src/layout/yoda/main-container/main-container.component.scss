@@ -1,12 +1,9 @@
 .kbm-main-container {
   overflow-y: auto;
   display: grid;
-  grid-template-rows:75px 130px 1fr;
+  grid-template-rows:100px  1fr;
 }
 
-.dashboard {
-
-}
 
 main {
   padding: var(--main-gap, 20px);

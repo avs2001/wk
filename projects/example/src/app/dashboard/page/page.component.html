@@ -1,4 +1,17 @@
-<p>page works!</p>
+<div kbm-default-page>
+  <ng-container ngProjectAs="dashboard">
+    <div class="dashboard">
+      <kbm-card>A</kbm-card>
+      <kbm-card>B</kbm-card>
+      <kbm-card>C</kbm-card>
+    </div>
+  </ng-container>
+  <ng-container ngProjectAs="content">
+    <p>Page content</p>
+    <kbm-checkbox>Kbm checkbox</kbm-checkbox>
+  </ng-container>
+</div>
+
 <kbm-navbar-projector>
   <h4>Dashboard</h4>
 </kbm-navbar-projector>
