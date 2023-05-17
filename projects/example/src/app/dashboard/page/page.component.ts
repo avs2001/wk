@@ -2,12 +2,19 @@ import {Component} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {NavbarProjectorComponent} from "@kbm/core/layout/navbar-projector/navbar-projector.component";
 import {DefaultPageComponent} from "@kbm/core/layout/yoda";
-import {CardComponent, CheckboxComponent, RadioComponent} from "@kbm/core";
+import {
+  CardComponent,
+  CheckboxComponent,
+  InputDirective,
+  InputGroupComponent,
+  LabelDirective,
+  RadioComponent
+} from "@kbm/core";
 
 @Component({
   selector: 'ex-page',
   standalone: true,
-  imports: [CommonModule, NavbarProjectorComponent, PageComponent, DefaultPageComponent, CardComponent, CheckboxComponent, RadioComponent],
+  imports: [CommonModule, NavbarProjectorComponent, PageComponent, DefaultPageComponent, CardComponent, CheckboxComponent, RadioComponent, InputGroupComponent, InputDirective, LabelDirective],
   templateUrl: './page.component.html',
   styleUrls: ['./page.component.scss'],
   host: {

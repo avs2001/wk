@@ -4,3 +4,29 @@
   gap: var(--main-gap, 20px);
   height: 100%;
 }
+
+.main {
+  display: flex;
+  flex-direction: column;
+}
+
+
+form {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+  height: 100%;
+
+  div.chbx {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    grid-column: 1;
+  }
+
+  // mediascreen fro tablet landscape
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    grid-template-columns: 1fr   1fr;
+  }
+
+}

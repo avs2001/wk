@@ -1,5 +1,5 @@
 .kbm-main-container {
-  overflow-y: auto;
+  overflow: hidden;
   display: grid;
   grid-template-rows:100px  1fr;
 }
@@ -7,4 +7,5 @@
 
 main {
   padding: var(--main-gap, 20px);
+  overflow: hidden;
 }
