@@ -5,6 +5,6 @@
   ],
   "dest": "../../../dist/kbm/core",
   "lib": {
-    "entryFile": "src/public-api.ts"
+    "entryFile": "src/index.ts"
   }
 }

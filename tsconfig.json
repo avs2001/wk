@@ -5,10 +5,10 @@
     "paths": {
       "@kbm/core": [
         "dist/kbm/core",
-        "projects/kbm/core/src/public-api"
+        "projects/kbm/core/src/index"
       ],
       "@kbm/kit": [
-        "projects/kbm/kit/src/public-api"
+        "projects/kbm/kit/src/index"
       ],
       "@kbm/layout": [
         "projects/kbm/layout/src/index"
