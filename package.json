@@ -5,6 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "start:doc": "ng serve documentor --port 4201",
     "build:core": "ng build @kbm/core --configuration production",
     "build:kit": "ng build @kbm/kit --configuration production",
     "build:layout": "ng build @kbm/layout --configuration production",
