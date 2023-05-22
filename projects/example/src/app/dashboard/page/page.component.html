@@ -4,4 +4,21 @@
 </kbm-navbar-projector>
 
 
+
+<kbm-card>
+  <div kbmCardContent>
+    <kbm-table [data]="data" (kbmSort)="sort($event)">
+      <kbm-column header="Status" field="status">
+        <ng-template let-data>
+          <div style="display: inline-flex; align-items: center">
+            xxx
+          </div>
+        </ng-template>
+      </kbm-column>
+      <kbm-column header="Name" field="name" kbmColumnSort="name"></kbm-column>
+      <kbm-column header="Age" field="age"></kbm-column>
+      <kbm-column header="City" field="city"></kbm-column>
+    </kbm-table>
+  </div>
+</kbm-card>
 <kbm-paginator [totalItems]="100"></kbm-paginator>

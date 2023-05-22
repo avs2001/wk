@@ -1,0 +1,24 @@
+<table cdk-table [dataSource]="data">
+  <ng-container *ngFor="let column of columns" [cdkColumnDef]="column.field">
+    <th cdk-header-cell *cdkHeaderCellDef>
+      <ng-container [ngTemplateOutlet]="column.headerTemplate"></ng-container>
+    </th>
+    <td cdk-cell *cdkCellDef="let row">
+      <ng-container [ngTemplateOutlet]="cell" [ngTemplateOutletContext]="{$implicit:row, column:column}">
+      </ng-container>
+    </td>
+  </ng-container>
+
+  <tr cdk-header-row *cdkHeaderRowDef="displayedColumns"></tr>
+  <tr cdk-row *cdkRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+
+
+<ng-template #cell let-row let-column="column">
+  <ng-container *ngIf="column.template; else defaultCell">
+    <ng-container *ngTemplateOutlet="column.template; context: {$implicit:row}"></ng-container>
+  </ng-container>
+  <ng-template #defaultCell>
+    {{value(row, column)}}
+  </ng-template>
+</ng-template>

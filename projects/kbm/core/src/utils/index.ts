@@ -15,3 +15,4 @@ export * from './group-by';
 export * from './map-to-object';
 export * from './map-to-array';
 export * from './save-as';
+export * from './nested-path-resolver';

@@ -13,6 +13,7 @@ import {CdkPortalOutlet, PortalModule} from "@angular/cdk/portal";
   templateUrl: './toolbar.component.html',
   styleUrls: ['./toolbar.component.scss'],
   host: {
+    id: 'toolbar',
     '[class.kbm-toolbar]': 'true',
   },
   changeDetection: ChangeDetectionStrategy.OnPush,

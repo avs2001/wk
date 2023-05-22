@@ -1,13 +1,26 @@
 import {Component} from '@angular/core';
 import {NavbarProjectorComponent} from "@kbm/layout";
-import {PaginatorComponent} from "@kbm/core";
+import {
+  CardComponent,
+  CardContentDirective,
+  ColumnSortDirective,
+  PaginatorComponent,
+  SortDirective,
+  TableModule
+} from "@kbm/core";
 
 @Component({
   selector: 'ex-page',
   standalone: true,
   imports: [
     NavbarProjectorComponent,
-    PaginatorComponent
+    PaginatorComponent,
+    TableModule,
+    SortDirective,
+    TableModule,
+    ColumnSortDirective,
+    CardComponent,
+    CardContentDirective,
   ],
   templateUrl: './page.component.html',
   styleUrls: ['./page.component.scss'],
@@ -16,5 +29,12 @@ import {PaginatorComponent} from "@kbm/core";
   }
 })
 export class PageComponent {
+  data: any[] = [
+    {name: 'Ciprian', age: 40, city: 'Bucharest'},
+    {name: 'Daciana', age: 30, city: 'Bucharest'},
+  ];
 
+  sort($event: any) {
+    console.log($event);
+  }
 }

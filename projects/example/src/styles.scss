@@ -45,6 +45,16 @@
   //Sidebar
   --sidebar-width: 126px;
   --sidebar-background: var(--color-primary);
+
+
+  //Table
+  --table-font-size: 0.875rem;
+  --table-odd-row-background-color: #ccc;
+  --table-odd-font-color:#000;
+  --table-heading-color: #000;
+  --table-heading-font-size: .9rem;
+  --table-heading-font-weight: 700;
+  --table-row-radius: 1000px;
 }
 
 button.kbm-button-outline {

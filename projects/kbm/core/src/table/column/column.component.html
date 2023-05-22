@@ -1,0 +1,7 @@
+<ng-template #headerTemplate>
+  <span *ngIf="isSortable else h" [kbm-sortable]="field">{{header}}</span>
+</ng-template>
+
+<ng-template #h>
+  <span>{{header}}</span>
+</ng-template>

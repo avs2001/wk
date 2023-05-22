@@ -8,3 +8,5 @@ export * from './button';
 export * from './icon';
 export * from './card';
 export * from './pagination';
+export * from './table';
+export * from './sort';

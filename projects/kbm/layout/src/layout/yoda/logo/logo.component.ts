@@ -6,6 +6,9 @@ import {ChangeDetectionStrategy, Component, ViewEncapsulation} from '@angular/co
   imports: [],
   templateUrl: './logo.component.html',
   styleUrls: ['./logo.component.scss'],
+  host: {
+    id: 'logo',
+  },
   changeDetection: ChangeDetectionStrategy.OnPush,
   encapsulation: ViewEncapsulation.None
 })

@@ -7,7 +7,7 @@ import {OpenSlot} from "../open-slot";
   standalone: true,
   imports: [PortalModule],
   host: {
-    'id': 'xxx'
+    'id': 'navbar-projector'
   },
   templateUrl: './navbar-projector.html',
   styleUrls: ['./navbar-projector.scss']
