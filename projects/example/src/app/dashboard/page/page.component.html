@@ -1,55 +1,7 @@
-<div kbm-default-page>
-  <ng-container ngProjectAs="dashboard">
-    <div class="dashboard">
-      <kbm-card>A</kbm-card>
-      <kbm-card>B</kbm-card>
-      <kbm-card>C</kbm-card>
-    </div>
-  </ng-container>
-  <ng-container ngProjectAs="content">
-    <div class="main">
-      <p>Page content</p>
-      <form>
-        <div>
-          <kbm-input-group>
-            <label kbmLabel>First Name</label>
-            <input type="text" kbmInput>
-          </kbm-input-group>
-        </div>
-        <div>
-          <kbm-input-group>
-            <label kbmLabel>Last Name</label>
-            <input type="text" kbmInput>
-          </kbm-input-group>
-        </div>
-        <div>
-          <kbm-input-group>
-            <label kbmLabel>Username</label>
-            <input type="text" kbmInput>
-          </kbm-input-group>
-        </div>
-        <div>
-          <kbm-input-group>
-            <label kbmLabel>Email</label>
-            <input type="text" kbmInput>
-          </kbm-input-group>
-        </div>
-        <div class="chbx">
-          <kbm-checkbox>Kbm checkbox</kbm-checkbox>
-          <kbm-checkbox [checked]="true" disabled>Kbm checkbox disabled</kbm-checkbox>
-
-        </div>
-        <div>
-          <kbm-radio>Kbm radio</kbm-radio>
-          <kbm-radio disabled [checked]="true">Kbm radio disabled</kbm-radio>
-        </div>
-      </form>
-
-
-    </div>
-  </ng-container>
-</div>
-
+<p>page works!</p>
 <kbm-navbar-projector>
   <h4>Dashboard</h4>
 </kbm-navbar-projector>
+
+
+<kbm-paginator [totalItems]="100"></kbm-paginator>

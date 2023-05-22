@@ -4,13 +4,15 @@
   "compilerOptions": {
     "paths": {
       "@kbm/core": [
+        "dist/kbm/core",
         "projects/kbm/core/src/public-api"
-      ],
-      "@kbm/core/*": [
-        "projects/kbm/core/src/*"
       ],
       "@kbm/kit": [
         "projects/kbm/kit/src/public-api"
+      ],
+      "@kbm/layout": [
+        "dist/kbm/layout",
+        "projects/kbm/layout/src/public-api"
       ]
     },
     "baseUrl": "./",

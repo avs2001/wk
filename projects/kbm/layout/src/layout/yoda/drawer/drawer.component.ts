@@ -6,9 +6,11 @@ import {
   HostBinding,
   ViewEncapsulation
 } from '@angular/core';
-import {SidebarComponent, ToolbarComponent} from "@kbm/core/layout/yoda";
-import {OpenSlot} from "@kbm/core/layout/open-slot";
+import {SidebarComponent} from "../sidebar/sidebar.component";
+
+import {OpenSlot} from "../../open-slot";
 import {CdkPortalOutlet} from "@angular/cdk/portal";
+import {ToolbarComponent} from "../toolbar/toolbar.component";
 
 @Component({
   selector: 'kbm-drawer',
@@ -17,12 +19,13 @@ import {CdkPortalOutlet} from "@angular/cdk/portal";
   templateUrl: './drawer.component.html',
   styleUrls: ['./drawer.component.scss'],
   host: {
+    id: 'drawer',
     '[class.kbm-drawer]': 'true',
   },
   changeDetection: ChangeDetectionStrategy.OnPush,
   encapsulation: ViewEncapsulation.None,
   providers: [
-    {provide: OpenSlot, useExisting: DrawerComponent}
+    {provide: OpenSlot, useExisting: forwardRef(() => DrawerComponent)}
   ]
 })
 export class DrawerComponent implements OpenSlot {

@@ -7,6 +7,7 @@
     "build": "ng build",
     "build:core": "ng build @kbm/core --configuration production",
     "build:kit": "ng build @kbm/kit --configuration production",
+    "build:layout": "ng build @kbm/layout --configuration production",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },

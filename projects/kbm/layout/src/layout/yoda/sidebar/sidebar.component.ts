@@ -8,6 +8,7 @@ import {NgOptimizedImage} from "@angular/common";
   templateUrl: './sidebar.component.html',
   styleUrls: ['./sidebar.component.scss'],
   host: {
+    id: 'sidebar',
     '[class.kbm-sidebar]': 'true',
     '[class.small]': '!expanded()'
   },

@@ -1,6 +1,6 @@
 import {ChangeDetectionStrategy, Component, Host, SkipSelf, ViewEncapsulation} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {SidebarComponent, SidebarMenuItemComponent} from "@kbm/core/layout/yoda";
+import {SidebarComponent, SidebarMenuItemComponent} from "../index";
 
 @Component({
   selector: 'kbm-sidebar-menu',

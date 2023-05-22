@@ -1,15 +1,19 @@
 import {Component, OnInit} from '@angular/core';
-import {kbmRandomString} from "@kbm/core/utils";
+import {kbmRandomString} from "@kbm/core";
 import {FormControl, Validators} from "@angular/forms";
+
+import {RouterLink, RouterLinkActive, RouterOutlet} from "@angular/router";
+import {IconComponent} from "@kbm/core";
 import {
   DrawerComponent,
   LogoComponent,
-  MainContainerComponent,
-  SidebarComponent, SidebarMenuComponent, SidebarMenuItemComponent,
   ToolbarComponent,
-} from "@kbm/core/layout/yoda";
-import {RouterLink, RouterLinkActive, RouterOutlet} from "@angular/router";
-import {IconComponent} from "@kbm/core";
+  SidebarMenuComponent,
+  MainContainerComponent,
+  SidebarComponent,
+  SidebarMenuItemComponent
+} from '@kbm/layout';
+
 
 @Component({
   selector: 'ex-root',

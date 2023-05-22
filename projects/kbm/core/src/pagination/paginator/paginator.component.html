@@ -1,0 +1,36 @@
+<div class="kbm-paginator">
+  <div class="kbm-paginator__label">Page {{pageIndex}} of {{numberOfPages()}}</div>
+  <button class="kbm-paginator__fist-page" [disabled]="!hasPreviousPage()" (click)="firstPage()" *ngIf="showFirstLastButtons">
+    <svg class="paginator-icon" viewBox="0 0 24 24" focusable="false">
+      <path d="M18.41 16.59L13.82 12l4.59-4.59L17 6l-6 6 6 6zM6 6h2v12H6z"/>
+    </svg>
+  </button>
+  <button class="kbm-paginator__prev-page" [disabled]="!hasPreviousPage()" (click)="previousPage()">
+    <svg class="paginator-icon" viewBox="0 0 24 24" focusable="false">
+      <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+    </svg>
+  </button>
+  <!-- <div class="current-page">
+     <span class="current-page-number">{{pageIndex}}</span>
+   </div>-->
+  <div class="kbm-paginator__page-input">
+    <span>
+      <input type="text" [value]="pageIndex">
+      <!--<button (click)="go()">
+        <svg class="paginator-icon" viewBox="0 0 24 24" focusable="false">
+          <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
+        </svg>
+      </button>-->
+    </span>
+  </div>
+  <button class="kbm-paginator__next-page" [disabled]="!hasNextPage()" (click)="nextPage()">
+    <svg class="paginator-icon" viewBox="0 0 24 24" focusable="false">
+      <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+    </svg>
+  </button>
+  <button class="kbm-paginator__last-page" [disabled]="!hasNextPage()" (click)="lastPage()" *ngIf="showFirstLastButtons">
+    <svg class="paginator-icon" viewBox="0 0 24 24" focusable="false">
+      <path d="M5.59 7.41L10.18 12l-4.59 4.59L7 18l6-6-6-6zM16 6h2v12h-2z"/>
+    </svg>
+  </button>
+</div>

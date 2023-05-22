@@ -1,0 +1,127 @@
+
+.kbm-paginator {
+  display: flex;
+}
+
+.kbm-paginator__label {
+  display: inline-flex;
+  height: var(--width, 24px);
+  align-items: center;
+  justify-content: center;
+  font-size: 75%;
+  color: var(--text-color, #000);
+}
+
+.kbm-paginator__fist-page,
+.kbm-paginator__last-page,
+.kbm-paginator__prev-page,
+.kbm-paginator__next-page {
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  line-height: 0;
+  width: var(--width, 24px);
+  height: var(--width, 24px);
+  border: none;
+  background: none;
+
+  &:disabled {
+    cursor: not-allowed;
+
+    .paginator-icon {
+      path {
+        fill: #ccc;
+      }
+    }
+  }
+}
+
+.kbm-paginator___current-page {
+  box-sizing: border-box;
+  display: inline-flex;
+  width: var(--width, 24px);
+  height: var(--width, 24px);
+  align-items: center;
+  justify-content: center;
+
+  .current-page-number {
+    background: transparent;
+    color: var(--text-color, #000);
+  }
+
+  border: none;
+  background: none;
+}
+
+
+.paginator-icon {
+  display: inline-block;
+  width: var(--width, 24px);
+  height: var(--width, 24px);
+
+  path {
+    fill: var(--icon-color, #000);
+  }
+}
+
+.kbm-paginator__page-input {
+  span {
+    position: relative;
+    display: inline-flex;
+    flex-direction: column;
+    height: var(--width, 24px);
+    width: 30px;
+
+    input {
+      border: none;
+      appearance: none;
+      outline: none;
+      border-bottom: 1px solid #ccc;
+      width: 100%;
+      height: 100%;
+    }
+
+    button {
+      margin: 0;
+      padding: 0;
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      border: none;
+      background: none;
+
+      svg {
+        path {
+          fill: #fff;
+        }
+      }
+    }
+
+    input:focus + button:not(:focus) {
+      visibility: visible;
+
+      svg {
+        path {
+          fill: green;
+        }
+      }
+    }
+
+
+    button:focus {
+      visibility: visible;
+
+      svg {
+        path {
+          fill: black;
+        }
+      }
+    }
+  }
+}
+
+
+
+

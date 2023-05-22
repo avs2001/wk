@@ -6,6 +6,9 @@ import {OpenSlot} from "../open-slot";
   selector: 'kbm-navbar-projector',
   standalone: true,
   imports: [PortalModule],
+  host: {
+    'id': 'xxx'
+  },
   templateUrl: './navbar-projector.html',
   styleUrls: ['./navbar-projector.scss']
 })

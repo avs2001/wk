@@ -1,6 +1,6 @@
 import {ChangeDetectionStrategy, Component} from '@angular/core';
-import { CommonModule } from '@angular/common';
-import {NavbarProjectorComponent} from "@kbm/core/layout/navbar-projector/navbar-projector.component";
+import {CommonModule} from '@angular/common';
+import {NavbarProjectorComponent} from '@kbm/layout';
 
 @Component({
   selector: 'ex-page',
@@ -8,10 +8,10 @@ import {NavbarProjectorComponent} from "@kbm/core/layout/navbar-projector/navbar
   imports: [CommonModule, NavbarProjectorComponent],
   templateUrl: './page.component.html',
   styleUrls: ['./page.component.scss'],
-  host:{
-    id:'user-page'
+  host: {
+    id: 'user-page'
   },
-  changeDetection:ChangeDetectionStrategy.OnPush,
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class PageComponent {
 
