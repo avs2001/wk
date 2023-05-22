@@ -28,7 +28,7 @@ import {AbstractControlDirective} from "@angular/forms";
   encapsulation: ViewEncapsulation.None,
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class InputGroupComponent implements AfterContentInit {
+export class InputGroupComponent {
   @ContentChild(PrefixDirective) prefix: PrefixDirective | undefined;
   @ContentChild(SuffixDirective) suffix: PrefixDirective | undefined;
   @ContentChild(InputDirective) _input: InputDirective | undefined;
@@ -59,9 +59,6 @@ export class InputGroupComponent implements AfterContentInit {
 
   get disabled() {
     return this._input ? this._input.disabled : false;
-  }
-
-  ngAfterContentInit(): void {
   }
 
 

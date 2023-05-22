@@ -8,15 +8,15 @@
   --main-gap: 64px;
 
   //Input
-  --input-height: 30px;
-  --input-radius: 5px;
-  --input-border-color: #666666;
-  --input-border-size: 1px;
-  --input-error-color: #FF0000;
-  --input-focus-border-color: #3FA9F5;
-  --input-disabled-border-color: #CCC;
-  --input-font-size: 12px;
-  --input-font-family: Inter, sans-serif;
+  --kbm-input-height: 30px;
+  --kbm-input-radius: 5px;
+  --kbm-input-border-color: #666666;
+  --kbm-input-border-size: 1px;
+  --kbm-input-error-color: #FF0000;
+  --kbm-input-focus-border-color: #3FA9F5;
+  --kbm-input-disabled-border-color: #CCC;
+  --kbm-input-font-size: 12px;
+  --kbm-input-font-family: Inter, sans-serif;
 
   //Label
   --label-font-size: 13px;
@@ -50,7 +50,7 @@
   //Table
   --table-font-size: 0.875rem;
   --table-odd-row-background-color: #ccc;
-  --table-odd-font-color:#000;
+  --table-odd-font-color: #000;
   --table-heading-color: #000;
   --table-heading-font-size: .9rem;
   --table-heading-font-weight: 700;
@@ -103,8 +103,8 @@ html, body {
 
 .kbm-input-group {
   &.test {
-    --input-height: 25px;
-    --input-radius: 900px;
-    --input-border-color: #666666;
+    --kbm-input-height: 25px;
+    --kbm-input-radius: 900px;
+    --kbm-input-border-color: #666666;
   }
 }

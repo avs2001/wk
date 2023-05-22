@@ -3,7 +3,7 @@ import {NavbarProjectorComponent} from "@kbm/layout";
 import {
   CardComponent,
   CardContentDirective, CheckboxComponent,
-  ColumnSortDirective,
+  ColumnSortDirective, InputDirective, InputGroupComponent, LabelDirective,
   PaginatorComponent,
   SortDirective,
   TableModule
@@ -22,6 +22,9 @@ import {
     CardComponent,
     CardContentDirective,
     CheckboxComponent,
+    InputGroupComponent,
+    InputDirective,
+    LabelDirective,
   ],
   templateUrl: './page.component.html',
   styleUrls: ['./page.component.scss'],

@@ -12,7 +12,7 @@
 
 ```css
 
-  --input-height: 30px;
+  --kbm-input-height: 30px;
   --input-radius: 5px;
   --input-border-color: #666666;
   --input-border-size: 1px;

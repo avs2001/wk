@@ -4,7 +4,6 @@
 </kbm-navbar-projector>
 
 
-
 <kbm-card>
   <div kbmCardContent>
     <kbm-table [data]="data" (kbmSort)="sort($event)">
@@ -19,9 +18,18 @@
       <kbm-column header="Age" field="age"></kbm-column>
       <kbm-column header="City" field="city"></kbm-column>
     </kbm-table>
+
+
+    <kbm-input-group>
+      <label kbmLabel>Test</label>
+      <input type="text" kbmInput>
+    </kbm-input-group>
   </div>
 </kbm-card>
 <kbm-paginator [totalItems]="100"></kbm-paginator>
 <kbm-checkbox>Checkbox</kbm-checkbox>
 <kbm-checkbox [disabled]="true">Checkbox</kbm-checkbox>
 <kbm-checkbox [checked]="true">Checkbox</kbm-checkbox>
+
+
+

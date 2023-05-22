@@ -6,14 +6,13 @@ import {RouterLink, RouterLinkActive, RouterOutlet} from "@angular/router";
 import {IconComponent} from "@kbm/core";
 import {
   DrawerComponent,
-  LogoComponent,
-  ToolbarComponent,
-  SidebarMenuComponent,
-  MainContainerComponent,
   SidebarComponent,
-  SidebarMenuItemComponent
-} from '@kbm/layout';
-
+  SidebarMenuItemComponent,
+  MainContainerComponent,
+  SidebarMenuComponent,
+  ToolbarComponent,
+  LogoComponent
+} from "@kbm/layout/yoda";
 
 @Component({
   selector: 'ex-root',
