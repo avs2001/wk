@@ -1,4 +1,4 @@
-# Input
+## Inputs
 
 ### Usage
 
@@ -21,4 +21,25 @@
   --input-disabled-border-color: #CCC;
   --input-font-size: 12px;
   --input-font-family: Inter, sans-serif;
+```
+
+## Checkbox
+
+```typescript
+<kbm-checkbox>Checkbox</kbm-checkbox>
+<kbm-checkbox [disabled]="true">Checkbox</kbm-checkbox>
+<kbm-checkbox [checked]="true">Checkbox</kbm-checkbox>
+
+```
+
+### Customization
+
+```css
+--kbm-checkbox-size: 20px;
+--kbm-checkbox-border-radius: 4px;
+--kbm-checkbox-background-color: transparent;
+--kbm-checkbox-border-color: #3FA9F5;
+--kbm-checkbox-background-color-checked: #3FA9F5;
+--kbm-checkbox-checkmark-color: #fff;
+--kbm-checkbox-font-size: 1rem;
 ```

@@ -2,7 +2,7 @@ import {Component} from '@angular/core';
 import {NavbarProjectorComponent} from "@kbm/layout";
 import {
   CardComponent,
-  CardContentDirective,
+  CardContentDirective, CheckboxComponent,
   ColumnSortDirective,
   PaginatorComponent,
   SortDirective,
@@ -21,6 +21,7 @@ import {
     ColumnSortDirective,
     CardComponent,
     CardContentDirective,
+    CheckboxComponent,
   ],
   templateUrl: './page.component.html',
   styleUrls: ['./page.component.scss'],
