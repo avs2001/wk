@@ -41,7 +41,9 @@ jobs:
         with:
           registry-url: https://npm.pkg.github.com/
       - name: Publish core library
-        if: 'contains(git diff --name-only ${{ github.sha }}~1..${{ github.sha }}, "dist/kbm/core")'
-        run: npm publish ./dist/kbm/core
+        with:
+          name: dist
+          path: ./dist/kbm/core
+        run: ls -la
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
