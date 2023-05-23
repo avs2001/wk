@@ -44,6 +44,6 @@ jobs:
         with:
           name: dist
           path: ./dist/kbm/core
-        run: ls -la
+        run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
