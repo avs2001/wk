@@ -21,9 +21,7 @@ jobs:
         with:
           name: dist
           path: |
-            ./dist/kbm/core
-            ./dist/kbm/kit
-            ./dist/kbm/layout
+            ./dist/kbm
 
   publish:
     needs: build
@@ -36,14 +34,12 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: dist
-          path: ./dist
+          path: ./dist/kbm
       - uses: actions/setup-node@v2
         with:
           registry-url: https://npm.pkg.github.com/
       - name: Publish core library
-        with:
-          name: dist
-          path: ./dist/kbm/core
-        run: npm publish
+        if: 'contains(git diff --name-only ${{ github.sha }}~1..${{ github.sha }}, "core")'
+        run: npm publish ./core
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
