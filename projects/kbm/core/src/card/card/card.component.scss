@@ -9,7 +9,7 @@
 
 .kbm-card-content {
   flex: 1;
-  padding: 0 var(--card-content-padding, 20px) 0 var(--card-content-padding, 20px);
+  padding: var(--card-content-padding, 20px);
 }
 
 .kbm-card-header {

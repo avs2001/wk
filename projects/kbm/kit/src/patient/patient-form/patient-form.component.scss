@@ -1,0 +1,30 @@
+form {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  --kbm-input-background: #FFF;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  &.full {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 1024px) {
+  form {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  form {
+    grid-template-columns: 1fr;
+  }
+}
+
+

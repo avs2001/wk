@@ -1,13 +1,13 @@
 table {
-  width: var(--table-width, 100%);
+  width: var(--kbm-table-width, 100%);
   border-collapse: collapse;
   background-color: transparent;
-  font-size: var(--table-font-size, 1rem);
+  font-size: var(--kbm-table-font-size, 1rem);
 
   th {
-    color: var(--table-heading-color, #000);
-    font-size: var(--table-heading-font-size, 1rem);
-    font-weight: var(--table-heading-font-weight, 700);
+    color: var(--kbm-table-heading-color, #000);
+    font-size: var(--kbm-table-heading-font-size, 1rem);
+    font-weight: var(--kbm-table-heading-font-weight, 700);
   }
 
   th, td {
@@ -17,20 +17,20 @@ table {
 
   tr {
     td:last-child {
-      border-top-right-radius: var(--table-row-radius, 900px);
-      border-bottom-right-radius: var(--table-row-radius, 900px);
+      border-top-right-radius: var(--kbm-table-row-radius, 900px);
+      border-bottom-right-radius: var(--kbm-table-row-radius, 900px);
     }
 
     td:first-child {
-      border-top-left-radius: var(--table-row-radius, 900px);
-      border-bottom-left-radius: var(--table-row-radius, 900px);
+      border-top-left-radius: var(--kbm-table-row-radius, 900px);
+      border-bottom-left-radius: var(--kbm-table-row-radius, 900px);
     }
 
     &:nth-child(odd) {
 
       td {
-        background-color: var(--table-odd-row-background-color, #fff);
-        color: var(--table-odd-font-color, #000);
+        background-color: var(--kbm-table-odd-row-background-color, #fff);
+        color: var(--kbm-table-odd-font-color, #000);
         padding: 0 10px;
       }
     }

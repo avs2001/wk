@@ -25,16 +25,16 @@
   --label-font-weight: 400;
 
   //Button
-  --button-background: var(--color-primary);
-  --button-border-color: transparent;
-  --button-radius: 4px;
-  --button-height: 40px;
-  --button-text-color: #FFFFFF;
-  --button-font-size: 1rem;
-  --button-font-weight: 400;
+  --kbm-button-background: var(--color-primary);
+  --kbm-button-border-color: transparent;
+  --kbm-button-radius: 4px;
+  --kbm-button-height: 40px;
+  --kbm-button-text-color: #FFFFFF;
+  --kbm-button-font-size: 1rem;
+  --kbm-button-font-weight: 400;
   //Button focus
-  --button-focus-background: var(--color-secondary);
-  --button-focus-border-color: transparent;
+  --kbm-button-focus-background: var(--color-secondary);
+  --kbm-button-focus-border-color: transparent;
 
   //Card
   --card-background: #F2F2F2;
@@ -58,28 +58,28 @@
 }
 
 button.kbm-button-outline {
-  --button-background: transparent;
-  --button-border-color: var(--color-primary);
-  --button-text-color: var(--color-primary);
-  --button-focus-background: transparent;
-  --button-focus-border-color: var(--color-secondary);
+  --kbm-button-background: transparent;
+  --kbm-button-border-color: var(--color-primary);
+  --kbm-button-text-color: var(--color-primary);
+  --kbm-button-focus-background: transparent;
+  --kbm-button-focus-border-color: var(--color-secondary);
 }
 
 button.kbm-button-link,
 a.kbm-button-link {
-  --button-background: transparent;
-  --button-border-color: transparent;
-  --button-text-color: var(--color-primary);
-  --button-focus-background: transparent;
-  --button-focus-border-color: var(--color-secondary);
+  --kbm-button-background: transparent;
+  --kbm-button-border-color: transparent;
+  --kbm-button-text-color: var(--color-primary);
+  --kbm-button-focus-background: transparent;
+  --kbm-button-focus-border-color: var(--color-secondary);
 }
 
 button.kbm-button-warning {
-  --button-background: var(--color-warning);
-  --button-border-color: transparent;
-  --button-text-color: #FFFFFF;
-  --button-focus-background: var(--color-warning);
-  --button-focus-border-color: transparent;
+  --kbm-button-background: var(--color-warning);
+  --kbm-button-border-color: transparent;
+  --kbm-button-text-color: #FFFFFF;
+  --kbm-button-focus-background: var(--color-warning);
+  --kbm-button-focus-border-color: transparent;
 }
 
 .kbm-checkbox {
@@ -107,4 +107,10 @@ html, body {
     --kbm-input-radius: 900px;
     --kbm-input-border-color: #666666;
   }
+}
+
+.form-card {
+  --card-background: #F2F2F2;
+  --card-border-radius: 10px;
+  --card-content-padding: 30px;
 }

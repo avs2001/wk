@@ -1,0 +1,33 @@
+.main {
+  display: flex;
+  flex-direction: column;
+}
+
+.tenant-menu {
+  a {
+    position: relative;
+    display: inline-flex;
+    font-weight: 700;
+    padding: 0.4rem 1rem;
+    border-right: 1px solid #000000;
+    text-decoration: none;
+    color: #000000;
+
+    &:last-child {
+      border-right: none;
+    }
+
+    &.active span {
+      border-bottom: 2px solid #3FA9F5;
+      /* &:after {
+         content: '';
+         position: absolute;
+         height: 2px;
+         bottom: -2px;
+         left: 4px;
+         right: 4px;
+         background: #3FA9F5;
+       }*/
+    }
+  }
+}

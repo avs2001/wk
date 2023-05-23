@@ -27,9 +27,47 @@
   </div>
 </kbm-card>
 <kbm-paginator [totalItems]="100"></kbm-paginator>
-<kbm-checkbox>Checkbox</kbm-checkbox>
-<kbm-checkbox [disabled]="true">Checkbox</kbm-checkbox>
-<kbm-checkbox [checked]="true">Checkbox</kbm-checkbox>
 
+
+<kbm-card>
+  <kbm-card-header>
+    <h4 kbmCardTitle>Checkbox</h4>
+  </kbm-card-header>
+  <div kbmCardContent>
+    <kbm-checkbox>Checkbox</kbm-checkbox>
+    <kbm-checkbox [disabled]="true">Checkbox</kbm-checkbox>
+    <kbm-checkbox [checked]="true">Checkbox</kbm-checkbox>
+  </div>
+</kbm-card>
+
+<kbm-card>
+  <kbm-card-header>
+    <h4 kbmCardTitle>Radio</h4>
+  </kbm-card-header>
+  <div kbmCardContent>
+    <kbm-radio>Radio</kbm-radio>
+    <kbm-radio [disabled]="true">Radio</kbm-radio>
+    <kbm-radio [checked]="true">Radio</kbm-radio>
+  </div>
+</kbm-card>
+
+<kbm-card>
+  <kbm-card-header>
+    <h4 kbmCardTitle>Buttons</h4>
+  </kbm-card-header>
+  <div kbmCardContent>
+    <button kbm-button>Click Me</button>
+    <button kbm-button>
+      <kbm-icon>add</kbm-icon>
+      Button with icon left
+    </button>
+    <button kbm-button>
+      Button with icon right
+      <kbm-icon end>add</kbm-icon>
+    </button>
+    <a kbm-button>Link button</a>
+
+  </div>
+</kbm-card>
 
 

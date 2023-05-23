@@ -25,11 +25,68 @@
     color: var(--label-color, #000);
   }
 
+  .input-group {
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+
+    .prefix {
+      @extend %c;
+      height: var(--kbm-input-height);
+      border-radius: var(--kbm-input-radius) 0 0 var(--kbm-input-radius);
+      border-right: none;
+      background-color: var(--kbm-input-background, transparent);
+    }
+
+    .input {
+      @extend %c;
+      position: relative;
+      flex: 1 1 auto;
+      height: var(--kbm-input-height);
+      border-radius: var(--kbm-input-radius);
+      background-color: var(--kbm-input-background, transparent);
+
+
+      input,
+      select {
+        padding: 0;
+        line-height: var(--kbm-input-height);
+        border: none;
+        outline: none;
+        appearance: none;
+        background: none;
+        font-weight: var(--font-weight, 400);
+        font-size: var(--kbm-input-font-size, 12px);
+        font-family: var(--kbm-input-font-family, inherit);
+        width: 100%;
+      }
+
+
+      &.native {
+        &:after {
+          content: "";
+          width: 0;
+          height: 0;
+          border-left: 5px solid rgba(0, 0, 0, 0);
+          border-right: 5px solid rgba(0, 0, 0, 0);
+          border-top: 5px solid var(--kbm-input-border-color, #ccc);
+          position: absolute;
+          right: 0;
+          top: 50%;
+          margin-top: -2.5px;
+          pointer-events: none;
+          transform: translateX(-100%);
+        }
+      }
+    }
+  }
+
   .suffix {
     @extend %c;
     height: var(--kbm-input-height);
     border-radius: 0 var(--kbm-input-radius) var(--kbm-input-radius) 0;
     border-left: none;
+    background-color: var(--kbm-input-background, transparent);
   }
 
   &.has-prefix {
@@ -69,62 +126,6 @@
   &.ng-invalid.ng-touched {
     .input-group {
       --kbm-input-border-color: var(--kbm-input-error-color);
-    }
-  }
-
-
-  .input-group {
-    display: flex;
-    width: 100%;
-    box-sizing: border-box;
-
-
-    .prefix {
-      @extend %c;
-      height: var(--kbm-input-height);
-      border-radius: var(--kbm-input-radius) 0 0 var(--kbm-input-radius);
-      border-right: none;
-    }
-
-    .input {
-      @extend %c;
-      position: relative;
-      flex: 1 1 auto;
-      height: var(--kbm-input-height);
-      border-radius: var(--kbm-input-radius);
-
-
-      input,
-      select {
-        padding: 0;
-        line-height: var(--kbm-input-height);
-        border: none;
-        outline: none;
-        appearance: none;
-        background: none;
-        font-weight: var(--font-weight, 400);
-        font-size: var(--kbm-input-font-size, 12px);
-        font-family: var(--kbm-input-font-family, inherit);
-        width: 100%;
-      }
-
-
-      &.native {
-        &:after {
-          content: "";
-          width: 0;
-          height: 0;
-          border-left: 5px solid rgba(0, 0, 0, 0);
-          border-right: 5px solid rgba(0, 0, 0, 0);
-          border-top: 5px solid var(--kbm-input-border-color, #ccc);
-          position: absolute;
-          right: 0;
-          top: 50%;
-          margin-top: -2.5px;
-          pointer-events: none;
-          transform: translateX(-100%);
-        }
-      }
     }
   }
 }

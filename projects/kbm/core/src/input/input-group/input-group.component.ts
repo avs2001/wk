@@ -1,4 +1,4 @@
-import {AfterContentInit, ChangeDetectionStrategy, Component, ContentChild, ViewEncapsulation} from '@angular/core';
+import {ChangeDetectionStrategy, Component, ContentChild, ViewEncapsulation} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {PrefixDirective} from "../prefix.directive";
 import {SuffixDirective} from "../suffix.directive";

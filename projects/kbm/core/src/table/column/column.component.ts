@@ -1,5 +1,6 @@
 import {ChangeDetectionStrategy, Component, ContentChild, inject, Input, TemplateRef, ViewChild} from '@angular/core';
 import {ColumnSortDirective} from "../column-sort.directive";
+import {kbmRandomString} from "../../utils";
 
 @Component({
   selector: 'kbm-column',
@@ -7,7 +8,7 @@ import {ColumnSortDirective} from "../column-sort.directive";
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ColumnComponent {
-  _field: string = '';
+  _field: string = kbmRandomString();
   hasNestedPath: boolean = false;
   @Input() header: string = '';
 

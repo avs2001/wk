@@ -1,4 +1,28 @@
-<p>page works!</p>
-<kbm-navbar-projector>
-  <h4>Tenants</h4>
-</kbm-navbar-projector>
+<section kbm-default-page>
+  <ng-container ngProjectAs="dashboard">
+
+  </ng-container>
+  <ng-container ngProjectAs="content">
+    <div class="main">
+      <kbm-card>
+        <kbm-card-header>
+          <nav class="tenant-menu">
+            <a routerLink="/tenant" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+              <span>Users</span>
+            </a>
+            <a routerLink="device" routerLinkActive="active">
+              <span>Devices</span>
+            </a>
+            <a routerLink="data-source" routerLinkActive="active">
+              <span>Data Sources</span>
+            </a>
+          </nav>
+          <hr>
+        </kbm-card-header>
+        <div kbmCardContent>
+          <router-outlet></router-outlet>
+        </div>
+      </kbm-card>
+    </div>
+  </ng-container>
+</section>

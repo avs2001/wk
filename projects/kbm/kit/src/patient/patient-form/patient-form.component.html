@@ -1,0 +1,96 @@
+<form [formGroup]="form">
+  <div class="col">
+    <kbm-input-group>
+      <label kbmLabel>First Name</label>
+      <input type="text" formControlName="firstName" kbmInput>
+    </kbm-input-group>
+  </div>
+  <div class="col">
+    <kbm-input-group>
+      <label kbmLabel>Last Name</label>
+      <input type="text" formControlName="lastName" kbmInput>
+    </kbm-input-group>
+  </div>
+  <div class="col">
+    <kbm-input-group>
+      <label kbmLabel>Username</label>
+      <input type="text" formControlName="username" kbmInput>
+    </kbm-input-group>
+  </div>
+  <div class="col">
+    <kbm-input-group>
+      <label kbmLabel>Email</label>
+      <input type="text" formControlName="email" kbmInput>
+    </kbm-input-group>
+  </div>
+  <div class="col">
+    <kbm-input-group>
+      <label kbmLabel>Phone</label>
+      <input type="text" formControlName="phone" kbmInput>
+    </kbm-input-group>
+  </div>
+
+  <div class="col">
+    <kbm-input-group>
+      <label kbmLabel>User Type</label>
+      <select formControlName="userType" kbmInput>
+        <option value="patient">Patient</option>
+        <option value="provider">Provider</option>
+      </select>
+    </kbm-input-group>
+  </div>
+  <div class="col">
+    <kbm-input-group>
+      <label kbmLabel>Patient ID</label>
+      <input type="text" formControlName="patientId" kbmInput>
+    </kbm-input-group>
+  </div>
+  <div class="col">
+    <kbm-input-group>
+      <label kbmLabel>Address</label>
+      <input type="text" formControlName="address" kbmInput>
+    </kbm-input-group>
+  </div>
+  <div class="col">
+    <kbm-input-group>
+      <label kbmLabel>Address 1</label>
+      <input type="text" formControlName="address1" kbmInput>
+    </kbm-input-group>
+  </div>
+  <div class="col">
+    <kbm-input-group>
+      <label kbmLabel>City</label>
+      <input type="text" formControlName="city" kbmInput>
+    </kbm-input-group>
+  </div>
+  <div class="col">
+    <kbm-input-group>
+      <label kbmLabel>State</label>
+      <input type="text" formControlName="state" kbmInput>
+    </kbm-input-group>
+  </div>
+  <div class="col">
+    <kbm-input-group>
+      <label kbmLabel>Postal Code</label>
+      <input type="text" formControlName="postalCode" kbmInput>
+    </kbm-input-group>
+  </div>
+  <div class="col">
+    <kbm-input-group>
+      <label kbmLabel>Birthdate</label>
+      <input type="text" formControlName="birthdate" kbmInput>
+    </kbm-input-group>
+  </div>
+  <div class="col">
+    <kbm-input-group>
+      <label kbmLabel>Country Code</label>
+      <input type="text" formControlName="countryCode" kbmInput>
+    </kbm-input-group>
+  </div>
+  <div class="col">
+    <kbm-checkbox formControlName="isActive">Active</kbm-checkbox>
+  </div>
+  <div class="col">
+    <button type="submit" kbm-button>Submit</button>
+  </div>
+</form>

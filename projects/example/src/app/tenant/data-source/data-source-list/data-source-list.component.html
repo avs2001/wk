@@ -1,0 +1,19 @@
+<kbm-navbar-projector>
+  <h4>Data Sources</h4>
+</kbm-navbar-projector>
+
+
+<div>
+  <kbm-table [data]="dataSources">
+    <kbm-column header="#ID" field="id"></kbm-column>
+    <kbm-column header="Name" field="name"></kbm-column>
+    <kbm-column header="key" field="key"></kbm-column>
+    <kbm-column>
+      <ng-template let-data>
+        <div style="display: flex; justify-content: flex-end;">
+          <kbm-icon end>add</kbm-icon>
+        </div>
+      </ng-template>
+    </kbm-column>
+  </kbm-table>
+</div>
