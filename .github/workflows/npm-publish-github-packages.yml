@@ -21,7 +21,9 @@ jobs:
         with:
           name: dist
           path: |
-            ./dist/kbm
+            ./dist/core
+            ./dist/kit
+            ./dist/layout
 
   publish:
     needs: build
@@ -39,6 +41,17 @@ jobs:
         with:
           registry-url: https://npm.pkg.github.com/
       - name: Publish core library
-        run: npm publish ./dist/kbm/core --access public
+        if: 'contains(git diff --name-only ${{ github.sha }}~1..${{ github.sha }}, "dist/core/")'
+        run: npm publish ./dist/core
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+      - name: Publish kit library
+        if: 'contains(git diff --name-only ${{ github.sha }}~1..${{ github.sha }}, "dist/kit/")'
+        run: npm publish ./dist/kit --access public
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+      - name: Publish layout library
+        if: 'contains(git diff --name-only ${{ github.sha }}~1..${{ github.sha }}, "dist/layout/")'
+        run: npm publish ./dist/layout --access public
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}

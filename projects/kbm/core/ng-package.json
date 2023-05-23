@@ -3,7 +3,7 @@
   "assets": [
     "src/styles/**/*.scss"
   ],
-  "dest": "../../../dist/kbm/core",
+  "dest": "../../../dist/core",
   "lib": {
     "entryFile": "src/index.ts"
   }
