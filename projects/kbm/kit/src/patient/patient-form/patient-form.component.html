@@ -34,8 +34,7 @@
     <kbm-input-group>
       <label kbmLabel>User Type</label>
       <select formControlName="userType" kbmInput>
-        <option value="patient">Patient</option>
-        <option value="provider">Provider</option>
+        <option [value]="ut.value" *ngFor="let ut of OUserType | keyvalue">{{ut.key}}</option>
       </select>
     </kbm-input-group>
   </div>
@@ -90,7 +89,9 @@
   <div class="col">
     <kbm-checkbox formControlName="isActive">Active</kbm-checkbox>
   </div>
-  <div class="col">
-    <button type="submit" kbm-button>Submit</button>
+  <div class="col full">
+    <div>
+      <button type="submit" kbm-button>Submit</button>
+    </div>
   </div>
 </form>

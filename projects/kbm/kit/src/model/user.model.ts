@@ -1,3 +1,5 @@
+import {UserType} from "./user-types";
+
 export interface BaseUser {
   id: number;
   firstName: string;
@@ -9,7 +11,7 @@ export interface BaseUser {
   lastLoginTime: number;
   isPendingActivation: boolean;
   isLocked: boolean;
-  userType: number;
+  userType: UserType;
   createdAt: number;
 }
 

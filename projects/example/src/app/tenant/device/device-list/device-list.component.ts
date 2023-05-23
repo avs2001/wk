@@ -1,6 +1,6 @@
-import {Component} from '@angular/core';
+import {ChangeDetectionStrategy, Component} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {IconComponent, kbmRandomString, TableModule} from "@kbm/core";
+import {IconComponent, TableModule} from "@kbm/core";
 import {NavbarProjectorComponent} from "@kbm/layout";
 
 @Component({
@@ -8,7 +8,8 @@ import {NavbarProjectorComponent} from "@kbm/layout";
   standalone: true,
   imports: [CommonModule, IconComponent, NavbarProjectorComponent, TableModule],
   templateUrl: './device-list.component.html',
-  styleUrls: ['./device-list.component.scss']
+  styleUrls: ['./device-list.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class DeviceListComponent {
   devices = [

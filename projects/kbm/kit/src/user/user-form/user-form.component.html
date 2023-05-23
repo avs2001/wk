@@ -1,0 +1,58 @@
+<!-- this.form = this.fb.group<UserFormModel>({
+      firstName: this.fb.control(null, [Validators.required]),
+      lastName: this.fb.control(null, [Validators.required]),
+      username: this.fb.control(null, [Validators.required]),
+      email: this.fb.control(null, [Validators.required, Validators.email]),
+      phone: this.fb.control(null),
+      isActive: this.fb.nonNullable.control(true),
+      userType: this.fb.control(null),
+    });-->
+<form [formGroup]="form">
+  <div class="col">
+    <kbm-input-group>
+      <label kbmLabel>First Name</label>
+      <input type="text" kbmInput formControlName="firstName">
+    </kbm-input-group>
+  </div>
+  <div class="col">
+    <kbm-input-group>
+      <label kbmLabel>Last Name</label>
+      <input type="text" kbmInput formControlName="lastName">
+    </kbm-input-group>
+  </div>
+  <div class="col">
+    <kbm-input-group>
+      <label kbmLabel>Username</label>
+      <input type="text" kbmInput formControlName="username">
+    </kbm-input-group>
+  </div>
+  <div class="col">
+    <kbm-input-group>
+      <label kbmLabel>Email</label>
+      <input type="email" kbmInput formControlName="email">
+    </kbm-input-group>
+  </div>
+  <div class="col">
+    <kbm-input-group>
+      <label kbmLabel>Phone</label>
+      <input type="text" kbmInput formControlName="phone">
+    </kbm-input-group>
+  </div>
+
+  <div class="col">
+    <kbm-input-group>
+      <label kbmLabel>User Type</label>
+      <select formControlName="userType" kbmInput>
+        <option [value]="ut.value" *ngFor="let ut of OUserType|keyvalue" value="admin">{{ut.key}}</option>
+      </select>
+    </kbm-input-group>
+  </div>
+  <div class="col">
+    <kbm-checkbox formControlName="isActive">Active</kbm-checkbox>
+  </div>
+  <div class="col full">
+    <div>
+      <button type="submit" kbm-button>Submit</button>
+    </div>
+  </div>
+</form>

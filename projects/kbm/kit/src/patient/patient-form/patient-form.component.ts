@@ -1,38 +1,10 @@
 import {ChangeDetectionStrategy, Component, HostListener, inject} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {Form, FormBuilder, FormControl, FormGroup, ReactiveFormsModule, Validators} from "@angular/forms";
-import {
-  ButtonComponent,
-  CheckboxComponent,
-  IconComponent,
-  InputDirective,
-  InputGroupComponent,
-  LabelDirective, PrefixDirective, SuffixDirective
-} from "@kbm/core";
+import {FormBuilder, FormControl, FormGroup, ReactiveFormsModule, Validators} from "@angular/forms";
+import {ButtonComponent, CheckboxComponent, InputDirective, InputGroupComponent, LabelDirective} from "@kbm/core";
+import {OUserType} from "../../model";
 
-/**
- id: number;
- firstName: string;
- lastName: string;
- username: string;
- email: string;
- phone: string;
- isActive: boolean;
- lastLoginTime: number;
- isPendingActivation: boolean;
- isLocked: boolean;
- userType: number;
- createdAt: number;
- patientId: string;
- address: string;
- address1: string;
- city: string;
- state: string;
- postalCode: string;
- birthdate: string;
- countryCode: string;
- gender: string;
- */
+
 type PatientFormModel = {
   firstName: FormControl<string | null>;
   lastName: FormControl<string | null>;
@@ -54,7 +26,7 @@ type PatientFormModel = {
 @Component({
   selector: 'kbm-patient-form',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule, InputGroupComponent, InputDirective, LabelDirective, CheckboxComponent, ButtonComponent, IconComponent, PrefixDirective, SuffixDirective],
+  imports: [CommonModule, ReactiveFormsModule, InputGroupComponent, InputDirective, LabelDirective, CheckboxComponent, ButtonComponent],
   templateUrl: './patient-form.component.html',
   styleUrls: ['./patient-form.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
@@ -89,4 +61,6 @@ export class PatientFormComponent {
       console.log(this.form.value);
     }
   }
+
+  protected readonly OUserType = OUserType;
 }

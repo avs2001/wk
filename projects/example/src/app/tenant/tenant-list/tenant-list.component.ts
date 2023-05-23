@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {ChangeDetectionStrategy, Component} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {NavbarProjectorComponent} from "@kbm/layout";
 import {RouterLink} from "@angular/router";
@@ -9,7 +9,8 @@ import {ButtonComponent, IconComponent, TableModule} from "@kbm/core";
   standalone: true,
   imports: [CommonModule, NavbarProjectorComponent, RouterLink, TableModule, ButtonComponent, IconComponent],
   templateUrl: './tenant-list.component.html',
-  styleUrls: ['./tenant-list.component.scss']
+  styleUrls: ['./tenant-list.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class TenantListComponent {
   tenants = [

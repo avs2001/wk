@@ -1,18 +1,26 @@
-import {Component, OnInit} from '@angular/core';
-import {kbmRandomString} from "@kbm/core";
+import {ChangeDetectionStrategy, Component, inject, OnInit} from '@angular/core';
+import {IconComponent} from "@kbm/core";
 import {FormControl, Validators} from "@angular/forms";
 
 import {RouterLink, RouterLinkActive, RouterOutlet} from "@angular/router";
-import {IconComponent} from "@kbm/core";
 import {
   DrawerComponent,
-  SidebarComponent,
-  SidebarMenuItemComponent,
+  LogoComponent,
   MainContainerComponent,
+  SidebarComponent,
   SidebarMenuComponent,
-  ToolbarComponent,
-  LogoComponent
+  SidebarMenuItemComponent,
+  ToolbarComponent
 } from "@kbm/layout/yoda";
+import {USER_TYPES} from "@kbm/kit";
+import {createApplication} from "@angular/platform-browser";
+
+@Component({
+  standalone: true,
+  template: 'Hello world!'
+})
+class RootComponent {
+}
 
 @Component({
   selector: 'ex-root',
@@ -31,15 +39,19 @@ import {
     RouterLink,
     RouterLinkActive
   ],
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AppComponent implements OnInit {
   title = 'example';
   control: any = new FormControl(null, {validators: [Validators.required]});
+  userTypes = inject(USER_TYPES)
 
-  ngOnInit() {
-    // this.control.disable();
-    console.log('kbmRandomString', kbmRandomString());
+  async ngOnInit() {
+    console.log(this.userTypes);
+
+    const app = await createApplication().catch(err => console.error(err));
+    console.log(app);
   }
 
 }

@@ -1,11 +1,19 @@
-import {Component, inject} from '@angular/core';
+import {ChangeDetectionStrategy, Component, inject} from '@angular/core';
 import {NavbarProjectorComponent} from "@kbm/layout";
 import {
   ButtonComponent,
   CardComponent,
-  CardContentDirective, CardHeaderComponent, CardTitleDirective, CheckboxComponent,
-  ColumnSortDirective, IconComponent, InputDirective, InputGroupComponent, LabelDirective,
-  PaginatorComponent, RadioComponent,
+  CardContentDirective,
+  CardHeaderComponent,
+  CardTitleDirective,
+  CheckboxComponent,
+  ColumnSortDirective,
+  IconComponent,
+  InputDirective,
+  InputGroupComponent,
+  LabelDirective,
+  PaginatorComponent,
+  RadioComponent,
   SortDirective,
   TableModule
 } from "@kbm/core";
@@ -37,7 +45,8 @@ import {HttpClient} from "@angular/common/http";
   styleUrls: ['./page.component.scss'],
   host: {
     'id': 'dashboard-page'
-  }
+  },
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class PageComponent {
   data: any[] = [

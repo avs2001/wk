@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {ChangeDetectionStrategy, Component} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {DefaultPageComponent, NavbarProjectorComponent} from '@kbm/layout';
 import {RouterLink, RouterLinkActive, RouterOutlet} from "@angular/router";
@@ -12,7 +12,8 @@ import {CardComponent, CardContentDirective, CardHeaderComponent} from "@kbm/cor
   styleUrls: ['./page.component.scss'],
   host: {
     'id': 'tenant-page'
-  }
+  },
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class PageComponent {
 
