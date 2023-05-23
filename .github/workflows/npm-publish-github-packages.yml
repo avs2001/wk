@@ -45,13 +45,3 @@ jobs:
         run: npm publish ./dist/kbm/core
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
-      - name: Publish kit library
-        if: 'contains(git diff --name-only ${{ github.sha }}~1..${{ github.sha }}, "dist/kbm/kit)'
-        run: npm publish ./dist/kbm/kit --access public
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
-      - name: Publish layout library
-        if: 'contains(git diff --name-only ${{ github.sha }}~1..${{ github.sha }}, "dist/kbm/layout")'
-        run: npm publish ./dist/kbm/layout
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
