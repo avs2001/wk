@@ -1,38 +1,57 @@
-# This workflow will run tests using node and then publish a package to GitHub Packages when a release is created
-# For more information see: https://docs.github.com/en/actions/publishing-packages/publishing-nodejs-packages
-
-name: Node.js Package
+name: Angular Package
 
 on:
-  release:
-    types: [created]
+  push:
+    branches: [ develop ]
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
         with:
           node-version: 16
       - run: npm ci
       - run: npm run build:core
       - run: npm run build:kit
       - run: npm run build:layout
+      - name: Upload distribution folders
+        uses: actions/upload-artifact@v2
+        with:
+          name: dist
+          path: |
+            ./dist/kbm/core
+            ./dist/kbm/kit
+            ./dist/kbm/layout
 
-  publish-gpr:
+  publish:
     needs: build
     runs-on: ubuntu-latest
     permissions:
-      contents: read
       packages: write
+      contents: read
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - name: Download distribution folders
+        uses: actions/download-artifact@v2
         with:
-          node-version: 16
+          name: dist
+          path: ./dist
+      - uses: actions/setup-node@v2
+        with:
           registry-url: https://npm.pkg.github.com/
-      - run: npm ci
-      - run: npm publish
+      - name: Publish core library
+        if: 'contains(git diff --name-only ${{ github.sha }}~1..${{ github.sha }}, "dist/kbm/core")'
+        run: npm publish ./dist/kbm/core
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+      - name: Publish kit library
+        if: 'contains(git diff --name-only ${{ github.sha }}~1..${{ github.sha }}, "dist/kbm/kit)'
+        run: npm publish ./dist/kbm/kit --access public
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+      - name: Publish layout library
+        if: 'contains(git diff --name-only ${{ github.sha }}~1..${{ github.sha }}, "dist/kbm/layout")'
+        run: npm publish ./dist/kbm/layout
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
