@@ -1,0 +1,57 @@
+name: Angular Package
+
+on:
+  push:
+    branches: [ develop ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 16
+      - run: npm ci
+      - run: npm run build:core
+      - run: npm run build:kit
+      - run: npm run build:layout
+      - name: Upload distribution folders
+        uses: actions/upload-artifact@v2
+        with:
+          name: dist
+          path: |
+            ./dist/core
+            ./dist/kit
+            ./dist/layout
+
+  publish:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      packages: write
+      contents: read
+    steps:
+      - name: Download distribution folders
+        uses: actions/download-artifact@v2
+        with:
+          name: dist
+          path: ./dist
+      - uses: actions/setup-node@v2
+        with:
+          registry-url: https://npm.pkg.github.com/
+      - name: Publish core library
+        if: 'contains(git diff --name-only ${{ github.sha }}~1..${{ github.sha }}, "dist/core/")'
+        run: npm publish ./dist/core --access public
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+      - name: Publish kit library
+        if: 'contains(git diff --name-only ${{ github.sha }}~1..${{ github.sha }}, "dist/kit/")'
+        run: npm publish ./dist/kit --access public
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+      - name: Publish layout library
+        if: 'contains(git diff --name-only ${{ github.sha }}~1..${{ github.sha }}, "dist/layout/")'
+        run: npm publish ./dist/layout --access public
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
