@@ -12,7 +12,7 @@
   "sideEffects": false,
   "repository": {
     "type": "git",
-    "url": "git@github.com:KeborMed/temp.kit.frontend.git"
+    "url": "git@github.com:avs2001/wk.git"
   },
   "publishConfig": {
     "@avs2001:registry": "https://npm.pkg.github.com"
